@@ -1,0 +1,34 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.python-version
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Data ---
+# Raw Retailrocket CSVs are intentionally excluded. They can be downloaded
+# from Kaggle or regenerated with: python -m src.generate_sample_data
+# Processed Parquet files and trained .joblib models are intentionally kept
+# because the deployed Streamlit app needs them at runtime.
+data/raw/*.csv
+!data/raw/.gitkeep
+
+# --- Logs ---
+logs/
+*.log
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Streamlit ---
+.streamlit/secrets.toml
